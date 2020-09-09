@@ -231,3 +231,5 @@ command! -nargs=0 Flist call s:Flist(bufnr('%'))
 
 "For my own editing of utility
 "map [g :e c:\0setup\vim61\plugin\foldlist.vim<cr>
+
+" vim: set ts=2 sw=2 tw=78 fdm=marker et :
