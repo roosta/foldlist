@@ -5,10 +5,10 @@
 "
 " Overview
 " --------
-" This is inspired by the taglist plugin.  The "Fold List" plugin 
+" This is inspired by the taglist plugin.  The "Fold List" plugin
 " provides the following features:
 "
-" 1. Opens a vertically split Vim window with a list of folds in 
+" 1. Opens a vertically split Vim window with a list of folds in
 "    the current file. Uses the fold name as a search pattern to
 "    goto the fold.
 " 2. Moving through the fold list with the j, k, l, h, moves to the
@@ -21,7 +21,7 @@
 "    ':help add-plugin', ':help add-global-plugin' and ':help runtimepath' for
 "    more details about Vim plugins.
 " 2. Restart Vim.
-" 3. You can use the ":Flist" command to open the foldlist window. 
+" 3. You can use the ":Flist" command to open the foldlist window.
 " 4. Handle up to 9 levels of folds. (search for '__T9' to change)
 "
 " Usage
@@ -33,7 +33,7 @@
 " Add the above mapping to your ~/.vimrc file.
 "
 " You can close the taglist window from the taglist window by pressing 'q' or
-" using the Vim ":q" command. 
+" using the Vim ":q" command.
 "
 " Send comments/suggestions/fixes to pwei@san.rr.com.
 "
@@ -266,7 +266,7 @@ function! s:Flist_move(dir)
 		silent! exe "norm zm 1G"
     else
 		if curline == '' || curline[0] == '"'
-		else 
+		else
 		  " find fold pattern
 		  let tagpat = substitute(curline,"^[ \t]*","","")
 		  echo ':'.tagpat.':'
