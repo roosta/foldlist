@@ -1,84 +1,15 @@
 " File: foldlist.vim
-" Author: Paul C. Wei
-" Version: l.0.5
-" Last Modified: 12/7/2004
-"
-" Overview
-" --------
-" This is inspired by the taglist plugin.  The "Fold List" plugin
-" provides the following features:
-"
-" 1. Opens a vertically split Vim window with a list of folds in
-"    the current file. Uses the fold name as a search pattern to
-"    goto the fold.
-" 2. Moving through the fold list with the j, k, l, h, moves to the
-"    associated fold in the file.
-" 3. <CR> jumps to associated fold in file.
-"
-" Installation
-" ------------
-" 1. Copy the foldlist.vim script to the $HOME/.vim/plugin directory.  Refer to
-"    ':help add-plugin', ':help add-global-plugin' and ':help runtimepath' for
-"    more details about Vim plugins.
-" 2. Restart Vim.
-" 3. You can use the ":Flist" command to open the foldlist window.
-" 4. Handle up to 9 levels of folds. (search for '__T9' to change)
-"
-" Usage
-" -----
-" You can open the foldinst window from a source window by using the ":Flist"
-" command.
-"               nnoremap <silent> <F9> :Flist<CR>
-"
-" Add the above mapping to your ~/.vimrc file.
-"
-" You can close the taglist window from the taglist window by pressing 'q' or
-" using the Vim ":q" command.
-"
-" Send comments/suggestions/fixes to pwei@san.rr.com.
-"
-" Caveats:
-" ---------
-" 1. Fold is searched using fold title only. This may find other places in file
-"    with the same string. I currently just hit 'l' or 'h' till find the
-"    correct fold. Will fix by adding a tag if it becomes sufficiently annoying.
-"
-" Wish List
-" ---------
-" 1. Make fold list hierarchical & folding.
-" 2. Make compatible w/ hi-note on palm (prob through ext conversion prog).
-" 3. Allow for changes in fold hierarchy in fold list reflect in file
-"
-" Example:
-" --------
-" /* vim: set fdm=marker : */
-" Phones {{{
-" }}}
-" ToDo {{{
-" Work {{{
-" }}}
-" Shop {{{
-" }}}
-" }}}
-"
-" Generates:
-" Phones
-" ToDo
-"  Work
-"  Shop
-"
-" Change Log:
-" 1.05 Change to use tab between levels of folds in fold list.
-"      Fix to work with C commented folds
-"
-" ****************** Do not modify after this line ************************
+" Fork Maintainer: Roosta <mail@roosta.sh>
+" Source: https://github.com/roosta/vim-foldlist
+" Version: 1.5
+" Original Source: https://github.com/vim-scripts/foldlist
+" Original Author: Paul C. Wei
 
 if exists('loaded_foldlist') || &cp
   finish
 endif
 let loaded_foldlist=1
 
-"======================================================================
 " Flist - generate fold list
 " Global Variables:
 " g:Flist_buf - buffer of file
