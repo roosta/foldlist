@@ -18,14 +18,19 @@ Put `foldlist.vim` in `~/.vim/plugin/` (on unix-like systems) or `%userprofile%\
 Vim 8 has native support for loading plugins. All you need to do to is to clone
 this repository into `~/.vim/plug/default/opt`.
 
-    git clone https://github.com/roosta/vim-foldlist ~/.vim/plug/default/opt
+```sh
+git clone https://github.com/roosta/vim-foldlist ~/.vim/plug/default/opt
+```
 
 The same works for NeoVim, but you have to clone it into a path where NeoVim can
 find it.
 
-    git clone https://github.com/roosta/vim-foldlist ~/.config/nvim/plug/default/opt
+```sh
+git clone https://github.com/roosta/vim-foldlist ~/.config/nvim/plug/default/opt
+```
 
 ### [dein.vim](https://github.com/Shougo/dein.vim)
+
 ```vim
 call dein#add('roosta/vim-foldlist')
 ```
